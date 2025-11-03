@@ -14,6 +14,7 @@ public class GameWindow extends JFrame {
 
         // Ekran gry
         add(new BoardPanel());
+        //k
 
         setVisible(true);
     }
