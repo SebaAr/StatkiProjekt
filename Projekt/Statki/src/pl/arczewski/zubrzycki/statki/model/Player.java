@@ -4,6 +4,7 @@ public class Player {
 
     private final String name;
     private final Board board;
+    private boolean ready = false; // nowa flaga - czy gracz potwierdził gotowość
 
     public Player(String name) {
         this.name = name;
@@ -12,4 +13,8 @@ public class Player {
 
     public String getName() { return name; }
     public Board getBoard() { return board; }
+
+    // ready
+    public boolean isReady() { return ready; }
+    public void setReady(boolean ready) { this.ready = ready; }
 }
