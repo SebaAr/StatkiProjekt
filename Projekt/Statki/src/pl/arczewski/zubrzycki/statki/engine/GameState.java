@@ -9,6 +9,9 @@ public class GameState {
 
     private PlayerTurn turn = PlayerTurn.PLAYER1;
 
+    // --- BOOSTY WŁĄCZONE / WYŁĄCZONE ---
+    private boolean boostsEnabled = true;
+
     public GameState(Player p1, Player p2) {
         this.player1 = p1;
         this.player2 = p2;
@@ -31,5 +34,15 @@ public class GameState {
 
     public void setTurn(PlayerTurn turn) {
         this.turn = turn;
+    }
+
+    // --- BOOSTY ---
+
+    public boolean isBoostsEnabled() {
+        return boostsEnabled;
+    }
+
+    public void setBoostsEnabled(boolean enabled) {
+        this.boostsEnabled = enabled;
     }
 }

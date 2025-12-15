@@ -1,8 +1,13 @@
 package pl.arczewski.zubrzycki.statki.model;
 
 /**
- * Reprezentacja statku: nazwa + rozmiar + liczba trafień + orientacja.
- * Konstruktor domyślny używa (name, size). Dodano też konstruktor pomocniczy z ShipType.
+ * Reprezentacja statku:
+ * - nazwa
+ * - rozmiar
+ * - liczba trafień
+ * - orientacja
+ * - pozycja (x,y)
+ * - flaga FAKE dla boosta TROLL
  */
 public class Ship {
 
@@ -11,24 +16,51 @@ public class Ship {
     private int hits = 0;
     private boolean horizontal = true;
 
+    // pozycja startowa statku na planszy
+    private int x;
+    private int y;
+
+    // czy to fałszywy statek (boost TROLL)
+    private boolean fake = false;
+
+    // konstruktor klasyczny
     public Ship(String name, int size) {
         this.name = name;
         this.size = size;
     }
 
-    // pomocniczy konstruktor (jeśli gdzieś w projekcie używasz ShipType)
-    public Ship(ShipType type) {
-        this.name = type.name();
-        this.size = type.getSize();
-    }
+    // -------- GET / SET podstawowe --------
 
     public String getName() { return name; }
+
     public int getSize() { return size; }
 
     public boolean isHorizontal() { return horizontal; }
-    public void setHorizontal(boolean horizontal) { this.horizontal = horizontal; }
+
+    // -------- Pozycja --------
+
+    public int getX() { return x; }
+    public int getY() { return y; }
+
+    public void setPosition(int x, int y, boolean horizontal) {
+        this.x = x;
+        this.y = y;
+        this.horizontal = horizontal;
+    }
+
+    // -------- Trafienia --------
 
     public void hit() { hits++; }
-    public int getHits() { return hits; }
+
     public boolean isSunk() { return hits >= size; }
+
+    // -------- Fake Ship (TROLL) --------
+
+    public boolean isFake() {
+        return fake;
+    }
+
+    public void setFake(boolean fake) {
+        this.fake = fake;
+    }
 }

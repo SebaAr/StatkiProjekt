@@ -1,0 +1,144 @@
+/* ---------- Global ---------- */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: linear-gradient(to bottom, #e7edf3, #d7dde4);
+    -fx-font-size: 16px;
+}
+
+/* ---------- Player labels ---------- */
+.player-name {
+    -fx-font-weight: bold;
+}
+
+.player-name-current {
+    -fx-font-size: 24px;
+    -fx-fill: #006600;
+}
+
+.player-name-enemy {
+    -fx-font-size: 24px;
+    -fx-fill: #aa0000;
+}
+
+.player-name-placement {
+    -fx-font-size: 26px;
+    -fx-fill: #0044aa;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    -fx-background-radius: 8px;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e2e2e2);
+    -fx-border-color: #b3b3b3;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0.2, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #f0f0f0, #d8d8d8);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #cccccc, #bbbbbb);
+}
+
+/* ---------- Ship buttons ---------- */
+.ship-button-selected {
+    -fx-background-color: #ffd54f;
+    -fx-font-weight: bold;
+    -fx-border-color: #ffb300;
+}
+
+/* ---------- History panel ---------- */
+.history-pane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 0 0 0 2px;
+}
+
+.history-entry {
+    -fx-font-size: 14px;
+    -fx-padding: 3px 0;
+}
+
+/* ---------- Board cells ---------- */
+.cell {
+    -fx-stroke: #4a6070;
+    -fx-arc-width: 6;
+    -fx-arc-height: 6;
+}
+
+.cell-water {
+    -fx-fill: #9fd3ff;
+}
+
+.cell-ship {
+    -fx-fill: #4b82c3;
+}
+
+.cell-hit {
+    -fx-fill: #ff4d4d;
+}
+
+.cell-miss {
+    -fx-fill: #a6a6a6;
+    -fx-opacity: 0.8;
+}
+
+.cell-preview-ok {
+    -fx-fill: rgba(0, 255, 0, 0.5);
+}
+
+.cell-preview-bad {
+    -fx-fill: rgba(255, 0, 0, 0.5);
+}
+
+/* ---------- ONLY enemy board hover ---------- */
+.cell-target:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,80,160,0.6), 12, 0.4, 0, 0);
+    -fx-cursor: hand;
+}
+
+/* ---------- Overlay ---------- */
+.turn-overlay {
+    -fx-background-color: rgba(0,0,0,0.85);
+}
+
+.turn-info {
+    -fx-font-size: 28px;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.turn-countdown {
+    -fx-font-size: 64px;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ---------- Separator (battle view) ---------- */
+.board-separator {
+    -fx-fill: #778899;
+}
+
+/* ---------- Wygrana ---------- */
+.game-end-text {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-fill: #002b80;
+    -fx-text-alignment: center;
+}
+
+/* ---------- Multiplayer ---------- */
+.pane-background {
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-background-radius: 12;
+    -fx-padding: 10;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 12;
+}
+
